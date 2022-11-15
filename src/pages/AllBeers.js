@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-
-function AllBeers() {
+function AllBeers(allBeers, setAllBeers) {
   const [beers, setBeers] = useState([]);
   const [reload, setReload] = useState(false);
 
@@ -37,7 +36,10 @@ function AllBeers() {
       {beers.map((beer) => {
         return (
           <div key={beer._id}>
-            <img className="imagem" src={beer.image_url} alt="Beer Type" />
+            <Link to={`/singlebeer/${beer._id}`}>
+              <img className="imagem" src={beer.image_url} alt="Beer Type" />
+              Show Details
+            </Link>
             <p>Beer Name: {beer.name}</p>
             <p>Tagline: {beer.tagline}</p>
             <p>Contributed By: {beer.contributed_by}</p>
