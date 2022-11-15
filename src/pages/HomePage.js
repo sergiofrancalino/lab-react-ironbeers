@@ -9,19 +9,19 @@ function HomePage(props) {
     <div>
       <HomeCards
         imagem={beers}
-        title="All Beers"
+        title="🍻 All Beers"
         text="We can view all the beers on the menu"
         link="/allbeers"
       />
       <HomeCards
         imagem={randomBeer}
-        title="Random Beer"
+        title="🔀 Random Beer"
         text="A beer could random showed from menu!"
         link="/randombeer"
       />
       <HomeCards
         imagem={newBeer}
-        title="New Beer"
+        title="🔂 New Beer"
         text="A new beer could be added to menu!"
       />
     </div>

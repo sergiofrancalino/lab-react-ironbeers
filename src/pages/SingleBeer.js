@@ -21,6 +21,7 @@ function SingleBeer() {
   return (
     <div>
       <div>
+       <h1>🔂 A Single Beer</h1>
        <img className="imagem" src={beer.image_url} alt="Single Bear" />
         <h1>Name: {beer.name}</h1>
         <div>Slogan:  {beer.tagline}</div>

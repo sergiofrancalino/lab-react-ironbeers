@@ -23,7 +23,7 @@ function AllBeers(allBeers, setAllBeers) {
 
   return (
     <div>
-      <h1>All Beers</h1>
+      <h1>​🆓 List ​all the Beers 🍻​​</h1>
 
       <form className="newber">
         <input type="text" placeholder="New beer's name?" />

@@ -22,7 +22,7 @@ function RandomBeer() {
 
   return (
     <div>
-      <h1>A Random Beer</h1>
+      <h1>🔀 A Random Beer</h1>
     
         <img className="imagem" src={sortedBeer.image_url} alt="Beer Sorted"/>
         <p>Beer Name: {sortedBeer.name}</p>
