@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./pages/Home";
+import HomePage from "./pages/HomePage";
 import { useState } from "react";
 import Backhome from "./components/BackHome";
 import AllBeers from "./pages/AllBeers";

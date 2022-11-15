@@ -3,7 +3,8 @@ import randomBeer from "../assets/random-beer.png";
 import newBeer from "../assets/new-beer.png";
 import HomeCards from "../components/HomeCards";
 
-function Home(props) {
+
+function HomePage(props) {
   return (
     <div>
       <HomeCards
@@ -27,4 +28,4 @@ function Home(props) {
   );
 }
 
-export default Home
+export default HomePage

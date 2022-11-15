@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function RandomBeer() {
-  const [beer, setBeer] = useState([]);
+  const [beers, setBeer] = useState([]);
   const [reload, setReload] = useState(false);
 
   useEffect(() => {
@@ -25,12 +25,14 @@ function RandomBeer() {
       <h1>A Random Beer from API</h1>
 
       <button onClick={handleReload}>Recarregar!</button>
-
-      {beer.random((randomBeer) => {
+    
+      {beers.flatMap((beer) => {
         return (
           <div key={beer._id}>
-            <p>{beer.nome}</p>
-            <p>{beer.tagline}</p>
+            <b>URL: {beer.image_url}</b>
+            <p>Beer Name: {beer.name}</p>
+            <p>Tagline: {beer.tagline}</p>
+            <p>Contributed By: {beer.contributed_by}</p>
           </div>
         );
       })}
