@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import AllBeers from "./AllBeers";
+
 
 function AllBeers() {
   const [beers, setBeers] = useState([]);
