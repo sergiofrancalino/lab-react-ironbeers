@@ -3,14 +3,14 @@ import home from "../assets/home.png";
 
 /*My Navbar back to home  */
 
-function BackHome() {
+function Navbar() {
   return (
     <nav className="back-home">
       <Link to="/">
-        <img width={600} src={home} alt="Back to Home Page" />
+        <img width={720} src={home} alt="Back to Home Page" />
       </Link>
     </nav>
   );
 }
 
-export default BackHome
+export default Navbar

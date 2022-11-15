@@ -1,11 +1,12 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
 import { useState } from "react";
-import Backhome from "./components/BackHome";
+
+import HomePage from "./pages/HomePage";
 import AllBeers from "./pages/AllBeers";
 import RandomBeer from "./pages/RandomBeer";
 import SingleBeer from "./pages/SingleBeer";
+import Navbar from './components/Navbar';
 
 function App(props) {
   const [allBeers, setAllBeers] = useState();
@@ -13,7 +14,7 @@ function App(props) {
 
   return (
     <div className="App">
-      <Backhome />
+      <Navbar />
 
       <Routes>
         <Route path="/" element={<HomePage />} />
