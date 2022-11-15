@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import AllBeers from "./AllBeers";
 
 function AllBeers() {
   const [beers, setBeers] = useState([]);
@@ -22,11 +24,11 @@ function AllBeers() {
 
   return (
     <div>
-      <h1>All Beers da API</h1>
+      <h1>All Beers</h1>
 
       <form className="newber">
-        <input type="text" placeholder="What's the new beer's name?" />
-        <input type="text" placeholder="The new beer's tagline!?" />
+        <input type="text" placeholder="New beer's name?" />
+        <input type="text" placeholder="New beer's tagline..." />
         <button>Save Now</button>
       </form>
 
@@ -35,14 +37,13 @@ function AllBeers() {
       {beers.map((beer) => {
         return (
           <div key={beer._id}>
-            <b>URL: {beer.image_url}</b>
+            <img className="imagem" src={beer.image_url} alt="Beer Type" />
             <p>Beer Name: {beer.name}</p>
             <p>Tagline: {beer.tagline}</p>
             <p>Contributed By: {beer.contributed_by}</p>
           </div>
         );
       })}
-      
     </div>
   );
 }
