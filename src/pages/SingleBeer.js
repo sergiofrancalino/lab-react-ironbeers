@@ -22,9 +22,9 @@ function SingleBeer() {
     <div>
       <div>
        <img className="imagem" src={beer.image_url} alt="Single Bear" />
-        <div>Name: {beer.name}</div>
+        <h1>Name: {beer.name}</h1>
         <div>Slogan:  {beer.tagline}</div>
-        <div>Created in: {beer.first_brewed}</div>
+        <div>Attenuation Level: {beer.attenuation_level}</div>
         <div>Description: {beer.description}</div>
         <div>Contributed By: {beer.contributed_by}</div>
       </div>

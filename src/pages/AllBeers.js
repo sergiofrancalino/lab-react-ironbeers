@@ -38,7 +38,6 @@ function AllBeers(allBeers, setAllBeers) {
           <div key={beer._id}>
             <Link to={`/singlebeer/${beer._id}`}>
               <img className="imagem" src={beer.image_url} alt="Beer Type" />
-              Show Details
             </Link>
             <p>Beer Name: {beer.name}</p>
             <p>Tagline: {beer.tagline}</p>
