@@ -14,7 +14,7 @@ function NewBeer() {
     description: "",
     first_brewed: "",
     brewers_tips: "",
-    attenuation_level: 0,
+    attenuation_level: 1,
     contributed_by: "",
   });
 
@@ -63,12 +63,10 @@ function NewBeer() {
 
   return (
     <div className="Form-new-beer">
-      <h1 className="Add-new-beer"> Add a new beer</h1>
-
       {(
         <form onSubmit={handleSubmit}>
           <div>
-            <label>Name</label>
+            <label>Bear name </label>
             <input
               type="text"
               name="name"
@@ -78,7 +76,7 @@ function NewBeer() {
           </div>
 
           <div>
-            <label>Tagline</label>
+            <label>Tagline/Slogan </label>
             <input
               type="text"
               name="tagline"
@@ -88,7 +86,7 @@ function NewBeer() {
           </div>
 
           <div>
-            <label>description</label>
+            <label>Description </label>
             <input
               type="text"
               name="description"
@@ -97,7 +95,7 @@ function NewBeer() {
             />
           </div>
           <div>
-            <label> first_brewed</label>
+            <label> First brewed </label>
             <input
               type="text"
               name="first_brewed"
@@ -106,7 +104,7 @@ function NewBeer() {
             />
           </div>
           <div>
-            <label>Brewers_tips</label>
+            <label>Brewers tips </label>
             <input
               type="text"
               name="brewers_tips"
@@ -115,7 +113,7 @@ function NewBeer() {
             />
           </div>
           <div>
-            <label>attenuation_level</label>
+            <label>Attenuation level </label>
             <input
               type="number"
               name="attenuation_level"
@@ -125,7 +123,7 @@ function NewBeer() {
           </div>
 
           <div>
-            <label>contributed_by</label>
+            <label>Contributed by </label>
             <input
               type="text"
               name="contributed_by"
@@ -134,7 +132,7 @@ function NewBeer() {
             />
           </div>
 
-          <button className="BtnSubmit" type="submit">Save</button>
+          <button className="Btn-add-new" type="submit">Add New</button>
         </form>
       )}
 
