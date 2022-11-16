@@ -134,7 +134,7 @@ function NewBeer() {
             />
           </div>
 
-          <button type="submit">Add Beer</button>
+          <button className="BtnSubmit" type="submit">Save</button>
         </form>
       )}
 
