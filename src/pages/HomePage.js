@@ -23,6 +23,7 @@ function HomePage(props) {
         imagem={newBeer}
         title="🔂 New Beer"
         text="A new beer could be added to menu!"
+        link="/new-beer"
       />
     </div>
   );

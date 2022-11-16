@@ -16,32 +16,29 @@ function AllBeers(allBeers, setAllBeers) {
 
     fetchBeers();
   }, [reload]);
-
+/* 
   function handleReload() {
     setReload(!reload);
-  }
+  } */
 
   return (
     <div>
-      <h1>​🆓 List ​all the Beers 🍻​​</h1>
+      <h1>​🆓 All the Beers </h1>
 
-      <form className="newber">
-        <input type="text" placeholder="New beer's name?" />
-        <input type="text" placeholder="New beer's tagline..." />
-        <button>Save Now</button>
-      </form>
-
-      <button onClick={handleReload}>Atualizar!!</button>
+      {/*     <button onClick={handleReload}>Atualizar!!</button> */}
 
       {beers.map((beer) => {
+
         return (
-          <div key={beer._id}>
+
+          <div className="Images-beers" key={beer._id}>
             <Link to={`/singlebeer/${beer._id}`}>
-              <img className="imagem" src={beer.image_url} alt="Beer Type" />
+              <img src={beer.image_url} alt="Beer Type" />
             </Link>
             <p>Beer Name: {beer.name}</p>
             <p>Tagline: {beer.tagline}</p>
             <p>Contributed By: {beer.contributed_by}</p>
+
           </div>
         );
       })}

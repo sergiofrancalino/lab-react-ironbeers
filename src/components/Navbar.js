@@ -5,7 +5,7 @@ import home from "../assets/home.png";
 
 function Navbar() {
   return (
-    <nav className="back-home">
+    <nav className="Nav-back-home">
       <Link to="/">
         <img width={720} src={home} alt="Back to Home Page" />
       </Link>
@@ -13,4 +13,4 @@ function Navbar() {
   );
 }
 
-export default Navbar
+export default Navbar;
