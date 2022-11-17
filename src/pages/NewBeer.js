@@ -1,10 +1,11 @@
-import { Button, Modal, Row, Col, Form } from "react-bootstrap";
+import { Button, Row, Col, Form, Card, Container } from "react-bootstrap";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-function NewBeer({ reload, setReload }) {
-  const [show, setShow] = useState(false);
+function NewBeer() {
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     name: "",
     tagline: "",
@@ -15,9 +16,6 @@ function NewBeer({ reload, setReload }) {
     contributed_by: "",
   });
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
@@ -26,7 +24,7 @@ function NewBeer({ reload, setReload }) {
     e.preventDefault();
     try {
       await axios.post("https://ih-beers-api2.herokuapp.com/beers/new", form);
-      handleClose();
+
       //limpar o meu formulário
       setForm({
         name: "",
@@ -38,24 +36,19 @@ function NewBeer({ reload, setReload }) {
         contributed_by: "",
       });
       toast.success("Beer sucesss created! :D");
-      setReload(!reload);
+      navigate("/allbeers");
     } catch (error) {
-      console.log(error);
       toast.error("Something's wrong. Try again!");
     }
   }
 
   return (
-    <div>
-      <Button variant="success" onClick={handleShow}>
-        + Create a new beer
-      </Button>
-
-      <Modal show={show} onHide={handleClose} size="xl">
-        <Modal.Header closeButton>
-          <Modal.Title>Create New Beer Form</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
+    <Container className="my-4">
+      <Card size="xl">
+        <Card.Header>
+          <Card.Title>Form Create - New beer</Card.Title>
+        </Card.Header>
+        <Card.Body>
           <Form>
             <Row>
               <Col>
@@ -107,10 +100,11 @@ function NewBeer({ reload, setReload }) {
                 </Form.Group>
               </Col>
             </Row>
+
             <Row>
               <Col>
                 <Form.Group>
-                  <Form.Label>Brewers Tips</Form.Label>
+                  <Form.Label>Brew ers Tips</Form.Label>
                   <Form.Control
                     type="text"
                     name="brewers_tips"
@@ -145,17 +139,14 @@ function NewBeer({ reload, setReload }) {
               </Col>
             </Row>
           </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Cancel
-          </Button>
+        </Card.Body>
+        <Card.Footer>
           <Button variant="primary" onClick={handleSubmit}>
             Save New Beer
           </Button>
-        </Modal.Footer>
-      </Modal>
-    </div>
+        </Card.Footer>
+      </Card>
+    </Container>
   );
 }
 export default NewBeer;

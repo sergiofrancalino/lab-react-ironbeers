@@ -1,12 +1,12 @@
+import { Container } from "react-bootstrap";
 import beers from "../assets/beers.png";
 import randomBeer from "../assets/random-beer.png";
 import newBeer from "../assets/new-beer.png";
 import HomeCards from "../components/HomeCards";
 
-
 function HomePage(props) {
   return (
-    <div>
+    <Container className="my-3">
       <HomeCards
         imagem={beers}
         title="🍻 All Beers"
@@ -25,8 +25,8 @@ function HomePage(props) {
         text="A new beer could be added to menu!"
         link="/new-beer"
       />
-    </div>
+    </Container>
   );
 }
 
-export default HomePage
+export default HomePage;
