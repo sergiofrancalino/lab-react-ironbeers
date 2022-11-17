@@ -88,7 +88,9 @@ function NewBeer({ reload, setReload }) {
                 <Form.Group>
                   <Form.Label>Description</Form.Label>
                   <Form.Control
-                    type="text" name="description" onChange={handleChange}
+                    type="text"
+                    name="description"
+                    onChange={handleChange}
                     value={form.description}
                   />
                 </Form.Group>
@@ -97,7 +99,9 @@ function NewBeer({ reload, setReload }) {
                 <Form.Group>
                   <Form.Label>First Brewed</Form.Label>
                   <Form.Control
-                    type="text" name="first_brewed" onChange={handleChange}
+                    type="text"
+                    name="first_brewed"
+                    onChange={handleChange}
                     value={form.first_brewed}
                   />
                 </Form.Group>
@@ -108,7 +112,9 @@ function NewBeer({ reload, setReload }) {
                 <Form.Group>
                   <Form.Label>Brewers Tips</Form.Label>
                   <Form.Control
-                    type="text" name="brewers_tips" onChange={handleChange}
+                    type="text"
+                    name="brewers_tips"
+                    onChange={handleChange}
                     value={form.brewers_tips}
                   />
                 </Form.Group>
@@ -117,8 +123,9 @@ function NewBeer({ reload, setReload }) {
                 <Form.Group>
                   <Form.Label>Attenuation level</Form.Label>
                   <Form.Control
-                    type="number" name="attenuation_level" onChange=
-                    {handleChange}
+                    type="number"
+                    name="attenuation_level"
+                    onChange={handleChange}
                     value={form.attenuation_level}
                   />
                 </Form.Group>
@@ -129,7 +136,9 @@ function NewBeer({ reload, setReload }) {
                 <Form.Group>
                   <Form.Label>Contributed by</Form.Label>
                   <Form.Control
-                    type="text" name="contributed_by" onChange={handleChange}
+                    type="text"
+                    name="contributed_by"
+                    onChange={handleChange}
                     value={form.contributed_by}
                   />
                 </Form.Group>
@@ -138,6 +147,9 @@ function NewBeer({ reload, setReload }) {
           </Form>
         </Modal.Body>
         <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Cancel
+          </Button>
           <Button variant="primary" onClick={handleSubmit}>
             Save New Beer
           </Button>
